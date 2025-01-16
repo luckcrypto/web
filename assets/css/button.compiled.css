@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400");
 :root {
-  /*  change this for scaling  */
   --m: 4rem;
   --red: #FF6565;
   --pink: #FF64F9;
@@ -9,25 +8,6 @@
   --green: #5BFF89;
   --yellow: #FFEE55;
   --orange: #FF6D1B;
-}
-
-button {
-  border: 3px solid transparent;
-  position: relative;
-  color: #F3F3F3;
-  font-family: "Space Grotesk";
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 14px;
-  padding: 10px 34px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  background: linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)), linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
-  background-origin: border-box;
-  background-clip: padding-box, border-box, border-box;
-  background-size: 200%;
-  animation: animate 2s infinite linear;
 }
 
 button {
@@ -64,6 +44,7 @@ button::before {
 
 button:hover, button:hover::before {
   animation: animate 0.5s infinite linear;
+  color: #ffa800;
 }
 
 @keyframes animate {
