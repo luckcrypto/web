@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+p,
+h1 {
+  color: #fff;
+  text-align: center;
+  cursor: default;
+}
+
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 40px;
+}
+
+table {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+tr {
+  border-bottom: 0px solid #000;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08), rgba(11, 11, 11, 0.6));
+}
+
+th {
+  background: rgba(11, 11, 11, 0.8);
+  line-height: 40px;
+  color: white;
+  font-family: "Space Grotesk";
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+th,
+td {
+  padding: 8px 8px;
+  color: #ffa800;
+}
+
+th:nth-of-type(2),
+td:nth-of-type(2) {
+  text-align: left;
+}
+
+.positive {
+  color: #6abe2a;
+  font-weight: 600;
+}
+
+.negative {
+  color: #ff0000;
+  font-weight: 600;
+}
