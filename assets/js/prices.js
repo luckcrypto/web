@@ -13,7 +13,7 @@ function getCryptoCompare() {
   ).done(function (data) {
     $("#btcLogo").html('<img src="https://cryptocompare.com' + data.RAW.BTC.USD.IMAGEURL + '">');
     $("#btcSymbol").text((data.RAW.BTC.USD.FROMSYMBOL).toLocaleString());
-    $("#btcPrice").text((data.RAW.BTC.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#btcPrice").text((data.RAW.BTC.USD.PRICE).toFixed(2));
     $("#btcChange").text((data.RAW.BTC.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#btcVol").text((data.RAW.BTC.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#btcCap").text((data.RAW.BTC.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -21,7 +21,7 @@ function getCryptoCompare() {
 
     $("#ethLogo").html('<img src="https://cryptocompare.com' + data.RAW.ETH.USD.IMAGEURL + '">');
     $("#ethSymbol").text((data.RAW.ETH.USD.FROMSYMBOL).toLocaleString());
-    $("#ethPrice").text((data.RAW.ETH.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#ethPrice").text((data.RAW.ETH.USD.PRICE).toFixed(2));
     $("#ethChange").text((data.RAW.ETH.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#ethVol").text((data.RAW.ETH.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#ethCap").text((data.RAW.ETH.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -29,7 +29,7 @@ function getCryptoCompare() {
 
     $("#usdtLogo").html('<img src="https://cryptocompare.com' + data.RAW.USDT.USD.IMAGEURL + '">');
     $("#usdtymbol").text((data.RAW.USDT.USD.FROMSYMBOL).toLocaleString());
-    $("#usdtPrice").text((data.RAW.USDT.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#usdtPrice").text((data.RAW.USDT.USD.PRICE).toFixed(2));
     $("#usdtChange").text((data.RAW.USDT.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#usdtVol").text((data.RAW.USDT.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#usdtCap").text((data.RAW.USDT.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -37,7 +37,7 @@ function getCryptoCompare() {
 
     $("#xrpLogo").html('<img src="https://cryptocompare.com' + data.RAW.XRP.USD.IMAGEURL + '">');    
     $("#xrpSymbol").text((data.RAW.XRP.USD.FROMSYMBOL).toLocaleString());
-    $("#xrpPrice").text((data.RAW.XRP.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#xrpPrice").text((data.RAW.XRP.USD.PRICE).toFixed(3));
     $("#xrpChange").text((data.RAW.XRP.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#xrpVol").text((data.RAW.XRP.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#xrpCap").text((data.RAW.XRP.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -45,7 +45,7 @@ function getCryptoCompare() {
 
     $("#solLogo").html('<img src="https://cryptocompare.com' + data.RAW.SOL.USD.IMAGEURL + '">');
     $("#solSymbol").text((data.RAW.SOL.USD.FROMSYMBOL).toLocaleString());
-    $("#solPrice").text((data.RAW.SOL.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#solPrice").text((data.RAW.SOL.USD.PRICE).toFixed(2));
     $("#solChange").text((data.RAW.SOL.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#solVol").text((data.RAW.SOL.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#solCap").text((data.RAW.SOL.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -53,7 +53,7 @@ function getCryptoCompare() {
     
     $("#dogeLogo").html('<img src="https://cryptocompare.com' + data.RAW.DOGE.USD.IMAGEURL + '">'); 
     $("#dogeSymbol").text((data.RAW.DOGE.USD.FROMSYMBOL).toLocaleString());
-    $("#dogePrice").text((data.RAW.DOGE.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#dogePrice").text((data.RAW.DOGE.USD.PRICE).toFixed(3));
     $("#dogeChange").text((data.RAW.DOGE.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#dogeVol").text((data.RAW.DOGE.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#dogeCap").text((data.RAW.DOGE.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -61,7 +61,7 @@ function getCryptoCompare() {
 
     $("#kasLogo").html('<img src="https://cryptocompare.com' + data.RAW.KAS.USD.IMAGEURL + '">'); 
     $("#kasSymbol").text((data.RAW.KAS.USD.FROMSYMBOL).toLocaleString());
-    $("#kasPrice").text((data.RAW.KAS.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#kasPrice").text((data.RAW.KAS.USD.PRICE).toFixed(4));
     $("#kasChange").text((data.RAW.KAS.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#kasVol").text((data.RAW.KAS.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#kasCap").text((data.RAW.KAS.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
@@ -69,7 +69,7 @@ function getCryptoCompare() {
     
     $("#xautLogo").html('<img src="https://cryptocompare.com' + data.RAW.XAUT.USD.IMAGEURL + '">');
     $("#xautSymbol").text((data.RAW.XAUT.USD.FROMSYMBOL).toLocaleString());
-    $("#xautPrice").text((data.RAW.XAUT.USD.PRICE).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#xautPrice").text((data.RAW.XAUT.USD.PRICE).toFixed(2));
     $("#xautChange").text((data.RAW.XAUT.USD.CHANGEPCT24HOUR).toFixed(2) + "%");
     $("#xautVol").text((data.RAW.XAUT.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#xautCap").text((data.RAW.XAUT.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
