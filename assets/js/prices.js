@@ -1,6 +1,6 @@
 $(function() {
   getMarketData();
-  setInterval(getMarketData, 10000);
+  setInterval(getMarketData, 1000);
 });
 
 function getMarketData() {
@@ -9,7 +9,7 @@ function getMarketData() {
 
 function getCryptoCompare() {
   $.when(
-    $.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,USDT,DOGE,SOL,XRP,KAS,XAUT&tsyms=USD")
+    $.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,USDT,XRP,SOL,DOGE,KAS,XAUT&tsyms=USD")
   ).done(function (data) {
     $("#btcLogo").html('<img src="https://cryptocompare.com' + data.RAW.BTC.USD.IMAGEURL + '">');
     $("#btcSymbol").text((data.RAW.BTC.USD.FROMSYMBOL).toLocaleString());
@@ -79,7 +79,7 @@ function getCryptoCompare() {
 
 
 
-$("#btcChange, #ethChange, #usdtChange, #dogeChange, #solChange #xrpChange, #xautChange").bind("DOMSubtreeModified", function(){
+$("#btcChange, #ethChange, #usdtChange, #xrpChange, #solChange, #dogeChange, #kasChange, #xautChange").bind("DOMSubtreeModified", function(){
   if($(this).is(":contains('-')")) {
     $(this).removeClass("positive").addClass("negative");
   } else {
