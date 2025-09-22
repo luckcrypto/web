@@ -1,0 +1,512 @@
+/* General*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700");
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: transparent;
+  color: #333;
+  font-size: 1.125em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: transparent;
+  text-decoration: none;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: transparent;
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #fff;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 2px solid transparent;
+  white-space: normal;
+  font-size: 18px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-default {
+  border-color: transparent;
+}
+
+a.btn-default:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+pre {
+  overflow: auto;
+}
+
+.container {
+  margin: 0 auto;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1365px) {
+  .container {
+    max-width: 85%;
+  }
+}
+@media (max-width: 801px) {
+  .container {
+    max-width: 92.5%;
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    max-width: 100%;
+  }
+}
+.center {
+  text-align: center !important;
+}
+
+.center-div {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.left-fa {
+  margin-right: 8px;
+}
+
+.right-fa {
+  margin-left: 8px;
+}
+
+.small-width, .medium-width, .large-width {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.small-width {
+  max-width: 400px;
+}
+
+.medium-width {
+  max-width: 500px;
+}
+
+.large-width {
+  max-width: 600px;
+}
+
+@media (max-width: 360px) {
+  .padding-left-small,
+.padding-left-small ul {
+    padding-left: 20px;
+  }
+}
+/* Newspaper 2+3 columns */
+.newspaper {
+  -webkit-columns: 2 347px;
+  -moz-columns: 2 347px;
+  columns: 2 347px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  -webkit-column-rule: 1px dotted #bfbfbf;
+  -moz-column-rule: 1px dotted #bfbfbf;
+  column-rule: 1px dotted #bfbfbf;
+}
+
+.newspaper ul, .newspaper ol {
+  margin-top: 0;
+}
+
+.newspaper img {
+  display: block;
+  float: left;
+  width: 100%;
+  max-width: 180px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .newspaper img {
+    max-width: 140px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .newspaper img {
+    float: none;
+    max-width: 100%;
+    margin-bottom: 0px;
+    padding: 0;
+  }
+}
+.newspaper-3 {
+  -webkit-columns: 3 270px;
+  -moz-columns: 3 270px;
+  columns: 3 270px;
+}
+
+/*-- Numbered nesting list --*/
+.numb-list ol {
+  counter-reset: item;
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+}
+
+.numb-list ol li {
+  display: table;
+  padding: 0;
+  margin: 0;
+}
+
+.numb-list ol li::before {
+  color: rgba(0, 133, 166, 0.5);
+  counter-increment: item;
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.numb-list ol li:hover:before {
+  color: transparent;
+}
+
+.numb-list li a.buttonControl span {
+  left: 100%;
+  top: 0;
+}
+
+/* -- Inline-list --*/
+.inline-list {
+  border-top: 1px solid transparent;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.inline-list li {
+  display: inline-block;
+  padding: 0;
+}
+
+.inline-list li a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.inline-list li ul {
+  padding-left: 0;
+}
+
+/*  Responsive Accordion | for Top menu, Toc menu, Accordion content
+--------------------------------------------------------------------- */
+/* -- General settings -- */
+.responsive-accordion {
+  list-style-type: none;
+  padding: 0;
+}
+
+.responsive-accordion li {
+  padding: 0;
+}
+
+.responsive-accordion li:last-child {
+  margin-bottom: 0;
+}
+
+.responsive-accordion li .responsive-accordion-head {
+  background-color: transparent;
+  border: 0px solid #bfbfbf;
+  border-radius: 3px;
+  color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.responsive-accordion li .responsive-accordion-head:hover,
+.responsive-accordion li .responsive-accordion-head.active {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.responsive-accordion li .responsive-accordion-head.active {
+  border-radius: 3px 3px 0 0 !important;
+}
+
+.responsive-accordion li .responsive-accordion-panel {
+  background-color: transparent;
+  border: 0px solid #bfbfbf;
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.28);
+}
+
+.responsive-accordion p:first-child {
+  margin-top: 0;
+}
+
+.responsive-accordion p:last-child {
+  margin-bottom: 0;
+}
+
+.responsive-accordion li .inline-list li {
+  margin: 0;
+}
+
+.responsive-accordion li .inline-list {
+  margin-bottom: 0;
+}
+
+.responsive-accordion li .padding-left-small li {
+  margin-bottom: 0px;
+}
+
+.responsive-accordion li .padding-left-small li ul,
+.responsive-accordion li .padding-left-small li ul li {
+  margin: 0;
+}
+
+.responsive-accordion li code {
+  overflow: auto;
+}
+
+/* Left icons */
+.responsive-accordion.ra-def li .responsive-accordion-head i,
+.responsive-accordion.ra-topmenu-invert li .responsive-accordion-head i,
+.responsive-accordion.ra-tocmenu li .responsive-accordion-head i,
+.responsive-accordion.ra-without li .responsive-accordion-head i,
+.responsive-accordion.ra-without-trans li .responsive-accordion-head i {
+  margin-right: 10px;
+}
+
+.responsive-accordion li .responsive-accordion-head i.fa-chevron-up,
+.responsive-accordion li .responsive-accordion-head i.fa-chevron-down {
+  vertical-align: 7%;
+}
+
+/* Right icons */
+.responsive-accordion.ra-def-right li .responsive-accordion-head i.rah-icon-right,
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-head i.rah-icon-right {
+  float: right;
+  margin-left: 10px;
+  position: relative;
+  top: 1px;
+}
+
+.responsive-accordion li .responsive-accordion-head i.fa-chevron-up.rah-icon-right,
+.responsive-accordion li .responsive-accordion-head i.fa-chevron-down.rah-icon-right {
+  top: -1px;
+}
+
+/* -- Versions -- */
+/* Responsive accordion left icon (without bg-border) */
+.responsive-accordion.ra-without li .responsive-accordion-head {
+  background: none;
+  border: 0;
+}
+
+.responsive-accordion.ra-without li .responsive-accordion-head:hover,
+.responsive-accordion.ra-without li .responsive-accordion-head.active {
+  background-color: transparent;
+}
+
+/* Responsive accordion left icon (without bg-border - transparent panel) */
+.responsive-accordion.ra-without-trans li .responsive-accordion-head {
+  background: none;
+  border: 0;
+  padding-left: 0;
+}
+
+.responsive-accordion.ra-without-trans li .responsive-accordion-head:hover,
+.responsive-accordion.ra-without-trans li .responsive-accordion-head.active {
+  background-color: transparent;
+  color: #85a600;
+}
+
+.responsive-accordion.ra-without-trans li .responsive-accordion-panel {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.panels .responsive-accordion.ra-without-trans {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* Toc menu */
+.responsive-accordion.ra-tocmenu {
+  display: inline-block;
+}
+
+/* For dark bgs - Top menu invert*/
+.responsive-accordion.ra-topmenu-invert {
+  display: inline-block;
+}
+
+.responsive-accordion.ra-topmenu-invert li .responsive-accordion-head {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+}
+
+.responsive-accordion.ra-topmenu-invert li .responsive-accordion-panel {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  .responsive-accordion.ra-topmenu-invert {
+    display: block;
+  }
+
+  .responsive-accordion.ra-topmenu-invert li .responsive-accordion-head {
+    padding: 0;
+  }
+}
+/* Responsive accordion right icon large padding border up-down 1px collapse */
+.responsive-accordion.ra-def-right.def-collapse > li {
+  margin-bottom: 0;
+}
+
+.responsive-accordion.ra-def-right.def-collapse li .responsive-accordion-head {
+  border-radius: 0;
+}
+
+.responsive-accordion.ra-def-right.def-collapse li:first-child .responsive-accordion-head {
+  border-radius: 3px 3px 0 0;
+}
+
+.responsive-accordion.ra-def-right.def-collapse li:last-child .responsive-accordion-head {
+  border-radius: 0 0 3px 3px;
+}
+
+.responsive-accordion.ra-def-right.def-collapse li .responsive-accordion-head:hover,
+.responsive-accordion.ra-def-right.def-collapse li .responsive-accordion-head.active {
+  background-color: transparent;
+}
+
+.responsive-accordion.ra-def-right.def-collapse li .responsive-accordion-panel {
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+/* Responsive accordion right icon large padding border up-down 2px & collapse*/
+.responsive-accordion.ra-def-right-lg > li {
+  margin-bottom: 0;
+}
+
+.responsive-accordion.ra-def-right-lg > li:first-child {
+  margin-top: 0;
+}
+
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-head {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 0 !important;
+}
+
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-head:hover,
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-head.active {
+  background-color: transparent;
+}
+
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-panel {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 359px) {
+  .responsive-accordion.ra-def-right li .responsive-accordion-head,
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-head {
+    text-align: center;
+  }
+
+  .responsive-accordion.ra-def-right li .responsive-accordion-head i.rah-icon-right,
+.responsive-accordion.ra-def-right-lg li .responsive-accordion-head i.rah-icon-right {
+    display: block;
+    float: none;
+  }
+}
+/* For panel show code */
+.source, .messageSource {
+  background: transparent;
+  border: 2px solid #00add9;
+  border-radius: 3px;
+  margin-bottom: 0px;
+  min-width: 0;
+  position: relative;
+}
+
+.source-title, .messageSourceTitle {
+  background: transparent;
+  border-radius: 3px 0 3px 0;
+  color: #fff;
+  left: -2px;
+  position: absolute;
+  top: -2px;
+}
+
+.source h4, .messageSource h4 {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+@media (max-width: 360px) {
+  .source-title, .messageSourceTitle {
+    border-radius: 3px 3px 0 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+/*  End Responsive Accordion */

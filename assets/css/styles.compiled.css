@@ -1,6 +1,6 @@
 :root {
-  --background-color: rgb(11, 11, 11);
-  --border-color: rgb(255, 255, 255, 0.1);
+  --background-color: rgba(11, 11, 11, 0.3);
+  --border-color: rgb(155, 155, 255, 0.1);
   --highlight-color: rgb(255, 58, 16);
   --yt-color: rgb(244, 57, 53);
 }
@@ -19,34 +19,24 @@ body {
 
 h1, h2, h3, a, p, span {
   font-family: "Space Grotesk";
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
-  color: white;
   margin: 0px;
+  filter: drop-shadow(1px 1px 2px rgba(1, 1, 13, 0.25));
 }
 
 a {
-  border: 3px solid transparent;
-  position: relative;
   color: #F3F3F3;
   font-family: "Space Grotesk";
   font-weight: bold;
-  font-size: 14px;
-  border-radius: 14px;
-  padding: 10px 28px;
-  display: flex;
   justify-content: center;
   cursor: pointer;
-  background: linear-gradient(#121213, #121213);
-  background-origin: border-box;
-  background-clip: padding-box, border-box, border-box;
-  background-size: 200%;
 }
 
 strong {
-  font-size: 12px;
+  font-size: 13px;
   transition: all 0.1s ease-in;
-  color: #ffa800;
+  color: #7c61ff;
   font-family: "Space Grotesk";
   font-weight: bold;
   cursor: default;
@@ -65,9 +55,7 @@ a {
 }
 
 a:hover {
-  color: #ffa800;
-  border-bottom: 2px solid var(--border-color);
-  margin-bottom: -2px;
+  color: #ffb800;
 }
 
 a::after {
@@ -75,7 +63,7 @@ a::after {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  border-radius: 5px;
+  border-radius: 50%;
   height: 2px;
   bottom: 0;
   left: 0;
@@ -88,6 +76,9 @@ a::after {
 nav {
   display: flex;
   width: 100%;
+  height: 18vh;
+  min-height: 80px;
+  padding: 20px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -104,6 +95,7 @@ nav .nav-section {
   display: flex;
   flex-basis: calc(100% * (2 / 3));
   z-index: 2;
+  padding: none;
 }
 
 #nav-toggle-button {
@@ -112,11 +104,12 @@ nav .nav-section {
   color: white;
   cursor: pointer;
   display: none;
-  gap: 1rem;
-  height: 80%;
+  gap: 0rem;
+  height: 66px;
+  width: 66px;
   justify-content: center;
   outline: none;
-  margin-right: 2%;
+  margin-right: 3vh;
   padding: 0rem 0rem;
   position: relative;
   z-index: 300;
@@ -125,7 +118,7 @@ nav .nav-section {
 
 #nav-toggle-button:hover,
 #nav-toggle-button:hover > span {
-  color: #00FF1A;
+  color: white;
 }
 
 #nav-toggle-button > span,
@@ -141,12 +134,12 @@ nav .nav-section {
 }
 
 #nav-logo-section {
-  flex-basis: calc(100% / 5);
+  flex-basis: calc(100% / 3);
   justify-content: flex-start;
 }
 
 #nav-logo-section > a > i {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 #nav-link-section {
@@ -298,13 +291,14 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   border-left: 1px solid var(--border-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 14000px) {
   #nav-mobile-section {
     flex-basis: calc(100% * 0.75);
+    padding: none;
   }
 
   #nav-logo-section {
-    flex-basis: calc(100% * 0.25);
+    flex-basis: calc(100% * 0.4);
   }
 
   #nav-link-section {
@@ -355,7 +349,7 @@ main > article > .article-nav-section {
     order: 4;
   }
 }
-@media (max-width: 940px) {
+@media (max-width: 14000px) {
   nav {
     justify-content: space-between;
   }
@@ -365,6 +359,7 @@ main > article > .article-nav-section {
     display: flex;
     justify-content: center;
     z-index: 30;
+    padding: none;
   }
 
   nav[data-toggled=true] > #nav-toggle-button {
@@ -373,6 +368,7 @@ main > article > .article-nav-section {
 
   nav[data-transitionable=true] > #nav-mobile-section {
     transition: transform 400ms ease;
+    padding: none;
   }
 
   nav .nav-section {
@@ -381,21 +377,26 @@ main > article > .article-nav-section {
   }
 
   #nav-logo-section > a > i {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-left: 1rem;
   }
 
   #nav-mobile-section {
     background-color: var(--background-color);
+    backdrop-filter: blur(7px);
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     position: fixed;
     transform: translateY(-200vh);
+    padding: none;
+    left: 0px;
+    top: 0px;
   }
 
   #nav-toggle-button {
-    margin-top: 8px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     display: flex;
   }
 
