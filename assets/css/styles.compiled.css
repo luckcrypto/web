@@ -33,6 +33,24 @@ a {
   cursor: pointer;
 }
 
+positive {
+  font-family: "Space Grotesk";
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px;
+  filter: drop-shadow(1px 1px 2px rgba(1, 1, 13, 0.25));
+  color: green;
+}
+
+negative {
+  font-family: "Space Grotesk";
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px;
+  filter: drop-shadow(1px 1px 2px rgba(1, 1, 13, 0.25));
+  color: red;
+}
+
 strong {
   font-size: 13px;
   transition: all 0.1s ease-in;
@@ -105,11 +123,11 @@ nav .nav-section {
   cursor: pointer;
   display: none;
   gap: 0rem;
-  height: 66px;
-  width: 66px;
+  height: 62px;
+  width: 68px;
   justify-content: center;
   outline: none;
-  margin-right: 3vh;
+  margin-left: 3vh;
   padding: 0rem 0rem;
   position: relative;
   z-index: 300;

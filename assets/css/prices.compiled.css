@@ -52,11 +52,19 @@ td:nth-of-type(2) {
 }
 
 .positive {
-  color: #6abe2a;
-  font-weight: 600;
+  font-family: "Space Grotesk";
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px;
+  filter: drop-shadow(1px 1px 2px rgba(1, 1, 13, 0.25));
+  color: green;
 }
 
 .negative {
-  color: #ff0000;
-  font-weight: 600;
+  font-family: "Space Grotesk";
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px;
+  filter: drop-shadow(1px 1px 2px rgba(1, 1, 13, 0.25));
+  color: red;
 }
