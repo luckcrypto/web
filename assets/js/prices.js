@@ -9,7 +9,7 @@ function getMarketData() {
 
 function getCryptoCompare() {
   $.when(
-    $.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,USDT,XRP,BNB,SOL,XAUT&tsyms=USD")
+    $.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,USDT,XRP,BNB,SOL,trx,XAUT&tsyms=USD")
   ).done(function (data) {
     $("#btcLogo").html('<img src="https://cryptocompare.com' + data.RAW.BTC.USD.IMAGEURL + '">');
     $("#btcSymbol").text((data.RAW.BTC.USD.FROMSYMBOL).toLocaleString());
@@ -59,6 +59,14 @@ function getCryptoCompare() {
     $("#solCap").text((data.RAW.SOL.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
     $("#solTime").text( (new Date(data.RAW.SOL.USD.LASTUPDATE * 1000) ).toLocaleString());
     
+    $("#trxLogo").html('<img src="https://cryptocompare.com' + data.RAW.TRX.USD.IMAGEURL + '">');
+    $("#trxSymbol").text((data.RAW.TRX.USD.FROMSYMBOL).toLocaleString());
+    $("#trxPrice").text((data.RAW.TRX.USD.PRICE).toFixed(4).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
+    $("#trxChange").text((data.RAW.TRX.USD.CHANGEPCT24HOUR).toFixed(2) + "‎ ‎%");
+    $("#trxVol").text((data.RAW.TRX.USD.VOLUME24HOUR).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#trxCap").text((data.RAW.TRX.USD.MKTCAP).toLocaleString("en-US", {style: "currency", currency: "USD"}));
+    $("#trxTime").text( (new Date(data.RAW.TRX.USD.LASTUPDATE * 1000) ).toLocaleString());
+
     $("#xautLogo").html('<img src="https://cryptocompare.com' + data.RAW.XAUT.USD.IMAGEURL + '">');
     $("#xautSymbol").text((data.RAW.XAUT.USD.FROMSYMBOL).toLocaleString());
     $("#xautPrice").text((data.RAW.XAUT.USD.PRICE).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
@@ -71,7 +79,7 @@ function getCryptoCompare() {
 
 
 
-$("#btcChange, #ethChange, #usdtChange, #xrpChange, #bnbChange, #solChange, #xautChange").bind("DOMSubtreeModified", function(){
+$("#btcChange, #ethChange, #usdtChange, #xrpChange, #bnbChange, #solChange, #trxChange, #xautChange").bind("DOMSubtreeModified", function(){
   if($(this).is(":contains('-')")) {
     $(this).removeClass("positive").addClass("negative");
   } else {
