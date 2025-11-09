@@ -24,7 +24,7 @@ Bitcoin, Ethereum, XRP, Solana Price Tracking more!">
     <link rel="stylesheet" href="assets/css/stylesheet.compiled.css">
 </head>
 
-<body style="background: linear-gradient(rgba(0,0,0,0.1) 0%, rgba(12,7,21,0.81) 33%, rgba(0,0,0,0.1) 100%), linear-gradient(rgba(0,0,0,0.36) 74%, rgba(8,5,14,0.8)), rgb(31,31,33);color: rgb(255,199,0);height: auto;">
+<body style="background: linear-gradient(rgba(0,0,0,0.1) 0%, rgba(7,15,21,0.81) 33%, rgba(0,0,0,0.1) 100%), linear-gradient(rgba(0,0,0,0.36) 74%, rgba(5,8,14,0.8)), rgb(31,31,33);color: rgb(255,199,0);height: auto;">
     <div style="height: 100vh;"><section class="base-template">
     <div class="wrapper base-template__wrapper">
 
@@ -536,6 +536,9 @@ Bitcoin, Ethereum, XRP, Solana Price Tracking more!">
                                     </div>
                                 </li>
                                 <li class="header__list-item">
+                                    <a data-bs-toggle="tooltip" data-bs-placement="down" title="COMING SOON" href="#">Mining Pool ⛏</a>
+                                </li>
+                                <li class="header__list-item">
                                     <a data-bs-toggle="tooltip" data-bs-placement="down" title="SOON" href="#">Coming Soon 🪙</a>
                                 </li>
                                 <li class="header__list-item">
@@ -567,57 +570,57 @@ Bitcoin, Ethereum, XRP, Solana Price Tracking more!">
       <tr>
         <th>🪙 </th>
         <th>Coins</th>
-        <th>Price 📈</th>
+        <th class="d-flex align-items-start">Price 📈</th>
         <th>24H ↕</th>
       </tr>
     </thead>
     <tbody>
         <tr>
         <td ><a  id="btcLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Bitcoin 🍀</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="btcSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="btcPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Bitcoin 🍀</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="btcSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="btcPrice"><div class='loader'></div></span></div></td>
         <td><span id="btcChange"><div class='loader'></div></span></td>
           </tr>
       <tr>
         <td ><a  id="ethLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Ethereum</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="ethSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="ethPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Ethereum</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="ethSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="ethPrice"><div class='loader'></div></span></div></td>
         <td><span id="ethChange"><div class='loader'></div></span></td>
       </tr>
         <tr>
         <td ><a  id="usdtLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="TRADE">Tether</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="usdtSymbol">USDT</strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="usdtPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="TRADE">Tether</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="usdtSymbol">USDT</strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="usdtPrice"><div class='loader'></div></span></div></td>
         <td><span id="usdtChange"><div class='loader'></div></span></td>
       </tr>
       <tr>
         <td ><a  id="bnbLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Binance 🤞</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="bnbSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="bnbPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Binance 🤞</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="bnbSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="bnbPrice"><div class='loader'></div></span></div></td>
         <td><span id="bnbChange"><div class='loader'></div></span></td>
       </tr>
       <tr>
         <td ><a  id="xrpLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Ripple 🔥</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="xrpSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="xrpPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Ripple 🔥</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="xrpSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="xrpPrice"><div class='loader'></div></span></div></td>
         <td><span id="xrpChange"><div class='loader'></div></span></td>
       </tr>
       <tr>
         <td ><a  id="solLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Solana</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="solSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="solPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Solana</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="solSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="solPrice"><div class='loader'></div></span></div></td>
         <td><span id="solChange"><div class='loader'></div></span></td>
       </tr>
       <tr>
         <td ><a  id="trxLogo"></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Tron</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="trxSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="trxPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Tron</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="trxSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="trxPrice"><div class='loader'></div></span></div></td>
         <td><span id="trxChange"><div class='loader'></div></span></td>
       </tr>
       <tr>
         <td ><p ><img src="assets/img/xaut.svg" style="width: 32px;height: 32px;"/></a></td>
-          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Gold 💰</a></p><strong style="color: rgb(124,97,255);" class="d-flex justify-content-start align-items-center" id="xautSymbol">LOADING...🍀<div class='loader'></div></strong></td>
-        <td><div class="d-flex align-items-center justify-content-center"><p>💵‎ ‎ ‎ </p><span id="xautPrice"><div class='loader'></div></span></div></td>
+          <td><p class="d-flex justify-content-start align-items-center"><a data-bs-toggle="tooltip" data-bs-placement="right" href="#" title="BUY">Gold 💰</a></p><strong style="color: orange;" class="d-flex justify-content-start align-items-center" id="xautSymbol">LOADING...🍀<div class='loader'></div></strong></td>
+        <td class="d-flex align-items-start"><div class="d-flex align-items-start justify-content-center"><p>💵‎ ‎ ‎ </p><span id="xautPrice"><div class='loader'></div></span></div></td>
         <td><span id="xautChange"><div class='loader'></div></span></td>
       </tr>
     </tbody>
